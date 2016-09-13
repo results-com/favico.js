@@ -39,6 +39,7 @@
 			position: 'down', // down, up, left, leftup (upleft)
 			animation: 'slide',
 			elementId: false,
+			icon:null,
 			element: null,
 			dataUrl: false,
 			win: window
@@ -117,7 +118,7 @@
 					_context = _canvas.getContext('2d');
 					icon.ready();
 				};
-				_img.setAttribute('src', _orig.getAttribute('href'));
+				_img.setAttribute('src', _opt.icon ? _opt.icon : _orig.getAttribute('href'));
 			} else {
 				_h = 32;
 				_w = 32;
